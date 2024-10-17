@@ -1,0 +1,70 @@
+{
+  "categorias": [
+      {
+          "tipo": "Notícias falsas",
+          "marcacao": "falso",
+          "contagem": 928083,
+          "descricao": "Fontes que fabricam informações inteiramente, disseminam conteúdo enganoso ou distorcem grosseiramente notícias reais."
+      },
+      {
+          "tipo": "Sátira",
+          "marcacao": "sátira",
+          "contagem": 146080,
+          "descricao": "Fontes que usam humor, ironia, exagero, ridículo e informações falsas para comentar eventos atuais."
+      },
+      {
+          "tipo": "Viés extremo",
+          "marcacao": "viés",
+          "contagem": 1300444,
+          "descricao": "Fontes que vêm de um ponto de vista específico e podem se basear em propaganda, informações descontextualizadas e opiniões distorcidas como fatos."
+      },
+      {
+          "tipo": "Teoria da conspiração",
+          "marcacao": "conspiração",
+          "contagem": 905981,
+          "descricao": "Fontes que são conhecidas promotoras de teorias da conspiração malucas."
+      },
+      {
+          "tipo": "Notícias do Estado",
+          "marcacao": "estado",
+          "contagem": 0,
+          "descricao": "Fontes em estados repressivos operando sob sanção governamental."
+      },
+      {
+          "tipo": "Ciência Lixo",
+          "marcacao": "ciência lixo",
+          "contagem": 144939,
+          "descricao": "Fontes que promovem pseudociência, metafísica, falácias naturalistas e outras afirmações cientificamente duvidosas."
+      },
+      {
+          "tipo": "Notícias de ódio",
+          "marcacao": "odiar",
+          "contagem": 117374,
+          "descricao": "Fontes que promovem ativamente o racismo, a misoginia, a homofobia e outras formas de discriminação."
+      },
+      {
+          "tipo": "Isca de clique",
+          "marcacao": "isca de clique",
+          "contagem": 292201,
+          "descricao": "Fontes que fornecem conteúdo geralmente confiável, mas usam títulos, descrições de mídia social e/ou imagens exageradas, enganosas ou questionáveis."
+      },
+      {
+          "tipo": "Prossiga com cautela",
+          "marcacao": "não confiável",
+          "contagem": 319830,
+          "descricao": "Fontes que podem ser confiáveis, mas cujos conteúdos exigem verificação adicional."
+      },
+      {
+          "tipo": "Político",
+          "marcacao": "político",
+          "contagem": 2435471,
+          "descricao": "Fontes que fornecem informações geralmente verificáveis ​​em apoio a certos pontos de vista ou orientações políticas."
+      },
+      {
+          "tipo": "Credível",
+          "marcacao": "confiável",
+          "contagem": 1920139,
+          "descricao": "Fontes que circulam notícias e informações de uma maneira consistente com práticas tradicionais e éticas no jornalismo."
+      }
+  ]
+}
