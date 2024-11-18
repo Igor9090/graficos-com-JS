@@ -1,3 +1,4 @@
+import { getCSS, criarGrafico , incluirTexto} from "./commun.js";
 const url = "assets/json/dados-fake-news.json";
 
 async function visualizarInformacoes() {
@@ -14,13 +15,11 @@ async function visualizarInformacoes() {
   const inforamcoesCautela = Math.round(dados["Prossiga com cautela"]/ 1e3);
   const inforamcoesPolitica = (dados.Político/ 1e6).toFixed(2);
 
-  const paragrafo = document.createElement("p");
-  paragrafo.classList.add("graficos-container_texto");
-  paragrafo.innerHTML = `De acordo com os dados obtidos, dentre as notícias compartilhadas, aproximadamente <span>${informacoesConfiaveis} milhões</span> de notícias são confiáveis, enquanto <span>${informacoesFalsas} mil</span> são notícias falsas. 
+  incluirTexto(`De acordo com os dados obtidos, dentre as notícias compartilhadas, aproximadamente <span>${informacoesConfiaveis} milhões</span> de notícias são confiáveis, enquanto <span>${informacoesFalsas} mil</span> são notícias falsas. 
   Também temos <span>${inforamcoesStaria} mil</span> notícias de sátira e <span>${informacoesExtremas} milhões</span> que apresentam viés extremo. Além disso, <span>${inforamcoesConspiracao} mil</span> se destacam como teorias da conspiração, 
   enquanto <span>${inforamcoesOdio} mil</span> refletem conteúdos de ódio. O estado, por sua vez, não apresenta notícias. 
   A categoria de <span>${inforamcoesCienciaLixo} mil</span> demonstra a desinformação em ciência. Além disso, <span>${inforamcoesIscaDeClick} mil </span> são noticias fornecem conteúdo geralmente confiável, mas usam títulos, descrições de mídia social e/ou imagens exageradas, enganosas ou questionáveis, 
-  e <span>${inforamcoesCautela} mil</span> servem como aviso. Finalmente, <span>${inforamcoesPolitica} milhões</span> indicam notícias relacionadas a política.`;
+  e <span>${inforamcoesCautela} mil</span> servem como aviso. Finalmente, <span>${inforamcoesPolitica} milhões</span> indicam notícias relacionadas a política.`)
   
   const container = document.getElementById("graficos-container");
   container.appendChild(paragrafo);

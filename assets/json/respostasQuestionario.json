@@ -1,0 +1,40 @@
+{
+  "Você já se deparou com notícias falsas?": {
+    "Sim, já me deparei": 33,
+    "Não, nunca me deparei": 0
+  },
+  "Qual é a frequência de exposição a notícias falsas?": {
+    "Diariamente": 18,
+    "Algumas vezes por semana": 11,
+    "Raramente": 3,
+    "Nunca": 0
+  },
+  "Quais medidas você adota para identificar notícias falsas?": {
+    "Verifico outras fontes de informação": 17,
+    "Leio os comentários ou opiniões de especialistas": 9,
+    "Não costumo verificar a veracidade das informações": 4,
+    "Faço uma pesquisa aprofundada sobre o tema": 2
+  },
+  "Você já compartilhou uma notícia falsa e posteriormente descobriu que era incorreta?": {
+    "Sim, já compartilhei": 16,
+    "Não, nunca compartilhei": 8,
+    "Não tenho certeza": 8
+  },
+  "Qual é o impacto percebido das notícias falsas na sociedade?": {
+    "Muito alto": 23,
+    "Moderado": 7,
+    "Baixo": 2,
+    "Nenhum impacto": 0
+  },
+  "As notícias falsas já influenciaram sua opinião?": {
+    "Sim, influenciaram": 14,
+    "Não, não influenciaram": 8,
+    "Talvez": 10
+  },
+  "Quais medidas seriam eficazes para combater as notícias falsas?": {
+    "Aumentar as punições legais para criadores e disseminadores de notícias falsas": 14,
+    "Regular e fiscalizar plataformas digitais": 11,
+    "Melhorar a educação digital e o pensamento crítico": 6,
+    "Desenvolver softwares para verificar a veracidade das notícias": 1
+  }
+}

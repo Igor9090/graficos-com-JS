@@ -1,66 +1,59 @@
-import { getCSS } from "./commun.js";
+import { getCSS, criarGrafico, incluirTexto } from "./commun.js";
 
 async function quantidadeNoticias() {
-  const url = 'assets/json/dados-fake-news.json';
+  const url = "assets/json/dados-fake-news.json";
   const res = await fetch(url);
   const dados = await res.json();
-    
+
   const tiposNoticias = Object.keys(dados);
   const quantidadeNoticias = Object.values(dados);
 
-  var data = [{
-    type: "pie",
-    values: quantidadeNoticias,
-    labels: tiposNoticias,
-    textinfo: "label+percent",
-    insidetextorientation: "horizontal", 
-    automargin: true,                     
-      text: 'Dados sobre as Notícias',
+  var data = [
+    {
+      type: "pie",
+      values: quantidadeNoticias,
+      labels: tiposNoticias,
+      textinfo: "label+percent",
+      text: "Dados sobre as Notícias",
       font: {
-          family: 'Arial, sans-serif',
-          size: 24,
-          color: getCSS('--cor-secundaria')  
+        family: "Arial, sans-serif",
+        size: 24,
+        color: getCSS("--cor-secundaria"),
+      },
+      textfont: {
+        color: getCSS("--cor-do-texto"),
+        size: 14,
+      },
+      marker: {
+        colors: [getCSS("--cor-secundaria"), "#FF6347", "#3CB371"],
+      },
     },
-    textfont: {
-      color: getCSS('--cor-do-texto'),  
-      size: 14,
-    },
-    marker: {
-      colors: [getCSS('--cor-secundaria'), '#FF6347', '#3CB371'],  
-    }
-  }];
+  ];
 
   var layout = {
-    height: 500,
-    width: 700,  
-    paper_bgcolor: getCSS('--cor-de-fundo'),
-    plot_bgcolor: getCSS('--cor-de-fundo'),
-    margin: {
-      l: 50, r: 50, b: 50, t: 100,   
-    },
+    paper_bgcolor: getCSS("--cor-de-fundo"),
+    plot_bgcolor: getCSS("--cor-de-fundo"),
+    height: 700,
     title: {
-      text: 'Dados sobre as Notícias',
+      text: "Dados sobre as Notícias",
       font: {
-        family: getCSS('--font'),
+        family: getCSS("--font"),
         size: 24,
-        color: getCSS('--cor-secundaria')
+        color: getCSS("--cor-secundaria"),
       },
-      xanchor: 'center',  
-      y: 0.9              
-    }, 
-    showlegend: true,
+    },
     legend: {
-      x: 2.5,          
-      y: 1,         
-      xanchor: 'right',
-      yanchor: 'top' , 
+      font: {
+        family: getCSS("--font"),
+        size: 16
     }
+  }
   };
 
-  const grafico = document.createElement('div');
-  grafico.className = 'grafico';
-  document.getElementById('graficos-container').appendChild(grafico);
-  Plotly.newPlot(grafico, data, layout);
+  criarGrafico(data, layout);
+  incluirTexto(
+    `Os dados utilizados neste site foram obtidos a partir do repositório <span> FakeNewsCorpus </span> de <span> diversos27 </span> no GitHub. Com base nesses dados, desenvolvi uma API que alimenta os gráficos acima, permitindo a visualização dos resultados das pesquisas sobre notícias na internet. `
+  );
 }
 
 quantidadeNoticias();
